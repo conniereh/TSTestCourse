@@ -50,7 +50,7 @@ describe('LoginHandler test suite', () => {
             username: 'someUser',
             password: 'password'
         });
-        authorizerMock.generateToken.mockReturnValueOnce(null);
+        authorizerMock.generateToken.mockReturnValueOnce(null); 
         await loginHandler.handleRequest();
         expect(responseMock.statusCode).toBe(HTTP_CODES.NOT_fOUND);
         expect(responseMock.write).toBeCalledWith('wrong username or password');
